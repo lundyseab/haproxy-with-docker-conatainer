@@ -1,0 +1,67 @@
+services:
+  server1:
+    image: lundy/docker
+    privileged: true  # Enables Docker-in-Docker by giving the container necessary privileges
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+        # Optional: Expose Docker daemon on a port if needed
+    networks:
+      student_db:
+        ipv4_address: 192.168.170.10
+  server2:
+    image: lundy/docker
+    privileged: true  # Enables Docker-in-Docker by giving the container necessary privileges
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+        # Optional: Expose Docker daemon on a port if needed
+    networks:
+      student_db:
+        ipv4_address: 192.168.170.20
+  server3:
+    image: lundy/docker
+    privileged: true  # Enables Docker-in-Docker by giving the container necessary privileges
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+        # Optional: Expose Docker daemon on a port if needed
+    networks:
+      student_db:
+        ipv4_address: 192.168.170.30
+  server4:
+    image: lundy/docker
+    privileged: true  # Enables Docker-in-Docker by giving the container necessary privileges
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+        # Optional: Expose Docker daemon on a port if needed
+    networks:
+      student_db:
+        ipv4_address: 192.168.170.40
+  server5:
+    image: lundy/docker
+    privileged: true  # Enables Docker-in-Docker by giving the container necessary privileges
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+        # Optional: Expose Docker daemon on a port if needed
+    networks:
+      student_db:
+        ipv4_address: 192.168.170.50
+  server6:
+    image: lundy/docker
+    privileged: true  # Enables Docker-in-Docker by giving the container necessary privileges
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+        # Optional: Expose Docker daemon on a port if needed
+    networks:
+      student_db:
+        ipv4_address: 192.168.170.60
+  server7:
+    image: lundy/docker
+    privileged: true  # Enables Docker-in-Docker by giving the container necessary privileges
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+        # Optional: Expose Docker daemon on a port if needed
+    networks:
+      student_db:
+        ipv4_address: 192.168.170.70
+networks:
+  student_db:
+    external: true
