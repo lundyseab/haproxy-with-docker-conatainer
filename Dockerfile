@@ -41,7 +41,9 @@ RUN apt-get install -y openssh-server \
     net-tools \
     nano \
     vim
-RUN usermod -aG sudo $USER_NAME
+    
+RUN usermod -aG sudo $USER_NAME \
+    usermod -aG docker $USER_NAME
 
 # Create Docker directory (Optional)
 RUN mkdir -p /var/lib/docker
